@@ -1,5 +1,5 @@
 const convertFahrToCelsius = (x) => {
-    let yCelsius = Math.round(((x - 32) / 1.8) * 10000) / 10000;
+    let yCelsius = ((x - 32) / 1.8);
     if (Number.isNaN(yCelsius) || x === '' || x === ' ' || typeof (x) === 'boolean') {
         if (Array.isArray(x)) {
             console.log(`${JSON.stringify(x)} is not a valid number but a/an array`);
@@ -9,8 +9,8 @@ const convertFahrToCelsius = (x) => {
             return `${JSON.stringify(x)} is not a valid number but a/an ${typeof (x)}`;
         }
     } else {
-        console.log(yCelsius);
-        return yCelsius;
+        console.log(yCelsius.toFixed(4));
+        return yCelsius.toFixed(4);
     }
 }
 
